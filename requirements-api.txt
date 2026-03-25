@@ -1,0 +1,20 @@
+# Version allégée pour Railway (sans torch/transformers qui sont trop lourds)
+# Utilise ce fichier pour le déploiement initial
+
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Data & calculs
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+
+# Données de marché (indispensable pour les vrais signaux)
+yfinance>=0.2.33
+
+# Utilitaires
+python-dotenv>=1.0.0
+requests>=2.31.0
