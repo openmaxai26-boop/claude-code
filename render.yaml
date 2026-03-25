@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ai-trading-system
+    runtime: python
+    buildCommand: pip install -r requirements-api.txt
+    startCommand: uvicorn api.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: SYMBOLS
+        value: AAPL,MSFT,GLD,BTC-USD
+      - key: TIMEFRAME
+        value: 1d
+      - key: WEBHOOK_SECRET
+        value: change_this_secret
